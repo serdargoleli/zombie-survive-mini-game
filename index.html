@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zombie Survival</title>
+</head>
+
+<body>
+  <div id="game-container"></div>
+
+  <div id="ui-layer">
+    <!-- Start Screen -->
+    <div id="start-screen" class="screen">
+      <h1>ZOMBIE SURVIVOR</h1>
+      <p class="subtitle">ESCAPE THE APOCALYPSE</p>
+
+      <div class="character-selection">
+        <div class="char-card" id="select-male">
+          <img src="/assets/male.png" alt="Male Survivor">
+          <div class="char-name">MAX</div>
+        </div>
+        <div class="char-card" id="select-female">
+          <img src="/assets/female.png" alt="Female Survivor">
+          <div class="char-name">ALEX</div>
+        </div>
+      </div>
+
+      <div class="controls-info">
+        <div class="control-item"><span>WASD</span> MOVE</div>
+        <div class="control-item"><span>MOUSE</span> AIM</div>
+        <div class="control-item"><span>CLICK</span> SHOOT</div>
+      </div>
+    </div>
+
+    <!-- HUD -->
+    <div id="hud" class="hidden">
+      <div id="score-display">Score: <span id="score">0</span></div>
+      <div id="highscore-display">High Score: <span id="highscore">0</span></div>
+      <div id="weapon-display">Weapon: <span id="current-weapon">Pistol</span></div>
+    </div>
+
+    <!-- Game Over Screen -->
+    <div id="game-over-screen" class="screen hidden">
+      <h1>GAME OVER</h1>
+      <p>Your Score: <span id="final-score">0</span></p>
+      <button id="restart-btn" class="btn">Try Again</button>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
